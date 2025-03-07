@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-fade-in-delay-1 {
+  animation: fade-in 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fade-in 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-bar {
+  position: relative;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  position: absolute;
+  height: 100%;
+  background: linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%);
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
